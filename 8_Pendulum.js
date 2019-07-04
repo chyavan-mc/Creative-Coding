@@ -7,7 +7,7 @@ context.fillRect(0,0,canvas.width,canvas.height);
 const g = 10;
 const r = 0.02*canvas.height;
 const refRate = 25;
-const d = new Date();
+
 class Pendulum{
     constructor(i){
         this.len = (0.25*canvas.height) + (2*i*r);
