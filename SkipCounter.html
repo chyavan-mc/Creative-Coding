@@ -27,8 +27,8 @@ function drawRect(){
     context.fillRect(-20,-20,canvas.width+20,canvas.height+20);
 }
 
-function drawText(text){
-    context.font = Math.round(0.5*Math.min(midX,midY)) + "px Arial";
+function drawText(text, size){
+    context.font = Math.round(size) + "px Arial";
     context.fillStyle = "#FFF";
     context.fillText(text, midX, midY);
 }
@@ -37,9 +37,9 @@ canvas.onclick = function(){
     drawRect();
     tm = (endTime - startTime)/1000;
     if(count==0){startTime = new Date().getTime();}
-    if(count<100){count+=1; drawText(count);}
+    if(count<100){count+=1; drawText(count, 0.5*Math.min(midX,midY));}
     if(count==100){count+=1;endTime = new Date().getTime();}
-    if(count>=100){drawText(tm + ": Time");}
+    if(count>=100){drawText(tm + ": Time", 0.2*Math.min(midX,midY));}
 }
 </script>
     </body>
