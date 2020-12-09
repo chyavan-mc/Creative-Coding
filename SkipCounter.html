@@ -1,0 +1,44 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <p align='center'>
+            <canvas id="cann" width="0px" height="0px">
+            </canvas>
+        </p>
+        <script>
+const canvas = document.getElementById("cann");
+const context = canvas.getContext("2d");
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+midX = canvas.width/2;
+midY = canvas.height/2;
+context.textAlign = "center";
+var count = 0;
+var startTime = 0;
+var endTime = 0;
+var tm = 0;
+drawRect();
+
+function drawRect(){
+    context.fillStyle = "#303050";
+    context.fillRect(0,0,canvas.width,canvas.height);
+}
+
+function drawText(text){
+    context.font = Math.round(0.5*Math.min(midX,midY)) + "px Arial";
+    context.fillStyle = "#FFF";
+    context.fillText(text, midX, midY);
+}
+
+canvas.onclick = function(){
+    drawRect();
+    tm = (endTime - startTime)/1000;
+    if(count==0){startTime = new Date().getTime();}
+    if(count<100){count+=1; drawText(count);}
+    if(count==100){count+=1;endTime = new Date().getTime();}
+    if(count>=100){drawText(tm + ": Time");}
+}
+</script>
+    </body>
+</html>
