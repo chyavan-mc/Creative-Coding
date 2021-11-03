@@ -8,11 +8,13 @@ const _ch_ = canvas.height;
 const g = 10;
 const t = 0.1;
 const refRate = 20;
-context.fillStyle = "#303030";
+var clear = 0;
+context.fillStyle = "#242430";
 context.fillRect(0,0,canvas.width,canvas.height);
 
 function clearCanvas(){
-    context.fillStyle = "#30303022";
+    clear += 1;
+    context.fillStyle = clear%15 == 0 ? "#24243088": "#24243022";
     context.fillRect(0,0,canvas.width,canvas.height);
 }
 
