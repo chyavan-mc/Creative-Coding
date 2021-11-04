@@ -1,10 +1,9 @@
 const canvas = document.getElementById("fireworks");
 const context = canvas.getContext("2d");
-
 canvas.width = window.innerWidth * 0.97;
 canvas.height = window.innerHeight * 0.97;
-const _cw_ = canvas.width;
-const _ch_ = canvas.height;
+let _cw_ = canvas.width;
+let _ch_ = canvas.height;
 const g = 10;
 const t = 0.1;
 const refRate = 20;
@@ -12,7 +11,7 @@ var clear = 0;
 context.fillStyle = "#242430";
 context.fillRect(0,0,canvas.width,canvas.height);
 
-function clearCanvas(){
+function clearCanvas() {
     clear += 1;
     context.fillStyle = clear%15 == 0 ? "#24243088": "#24243022";
     context.fillRect(0,0,canvas.width,canvas.height);
@@ -56,8 +55,9 @@ class Firework {
     setInitialState() {
         this.x = (1.5*Math.random()-0.25)*_cw_;
         this.y = _ch_;
-        let u = 0.08*_ch_ + 0.08*_ch_*Math.random();
-        this.theta = (Math.PI/6) + (2*Math.PI/3)*Math.random();
+        let top = Math.sqrt(2*g*_ch_);
+        let u = 0.5*top + 0.5*top*Math.random();
+        this.theta = (Math.PI/3) + (Math.PI/3)*Math.random();
         this.ux = u*Math.cos(this.theta);
         this.uy = u*Math.sin(this.theta);
         this.vx = this.ux;
@@ -105,8 +105,7 @@ var a = [];
 
 setInterval(function(){
     clearCanvas();
-    
-    context.font = "BOLDER " + Math.min(canvas.height/10,canvas.width/10)+"px Oleo Script Swash Caps";
+    context.font = Math.min(canvas.height/8,canvas.width/8)+"px Oleo Script Swash Caps";
     context.textAlign = "center";
     context.fillStyle = "#FFFFFF";
     context.fillText("Happy Diwali!", canvas.width/2, canvas.height/2);

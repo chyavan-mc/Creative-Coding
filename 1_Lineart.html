@@ -1,16 +1,39 @@
 <html>
-	<head>
 
-	</head>
+<head>
+    <title>Line Art</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
 
-	<body onload="start()" bgcolor="#202030">
-		<p align=center>	<canvas id="her" width="0px" height="0px" style="border : 2px solid #202030"></canvas>
-		</p>
-		<P align=center id = "Ballcount"></P>
-		<p align=center><button id="increase" type="button" style="height:0px;width:0px" onclick="increaser()">INCREASE LINES</button>
-		<button id="decrease" type="button" style="height:0px;width:0px" onclick="decreaser()">DECREASE LINES</button>
-		</p>
-	<script src="1_Lineart.js"></script>
-	</body>
+<body onload="start()">
+    <div class="flex-center">
+        <canvas id="her" width="0px" height="0px"></canvas>
+    </div>
+    <div id="Ballcount" class="flex-center padder"></div>
+    <div class="flex-center">
+        <button class="btn padder btn-success" onclick="increaser()">INCREASE LINES</button>
+        <button class="btn padder btn-success" onclick="decreaser()">DECREASE LINES</button>
+    </div>
+    <script src="1_Lineart.js"></script>
+</body>
 
 </html>
+
+<style>
+    body {
+        background-color: #202030;
+    }
+
+    .padder {
+        padding: 1rem 2rem;
+        margin: 0 1rem;
+    }
+
+    .flex-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
