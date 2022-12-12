@@ -1,6 +1,6 @@
 const canvas = document.getElementById("canv");
 const context = canvas.getContext("2d");
-canvasSize = 0.98;
+canvasSize = 0.99;
 canvas.width = window.innerWidth*canvasSize;
 canvas.height = window.innerHeight*canvasSize;
 let count = 0;
@@ -66,7 +66,7 @@ setInterval(function() {
     rainDrops = Math.floor(window.innerWidth / 4);
     canvas.width = window.innerWidth*canvasSize;
     canvas.height = window.innerHeight*canvasSize;
-    drawRect("#303540");
+    drawRect("#202030");
     if(array.length < rainDrops) {
         if(Math.random() < 0.2){
             array.push(new Drop());

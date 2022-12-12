@@ -1,12 +1,29 @@
 <html>
-<head>
-    
-</head>
-<body>
-    <p align="center">
-        <canvas id="pendulum" width="0px" height="0px">
-        </canvas>
-    <script src="8_Pendulum.js"></script>
-    </p>
-</body>
+    <head>
+        <title>Moon</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    </head>
+
+    <body>
+        <div class="flex-center">
+            <canvas width="0px" height="0px" id="pendulum"></canvas>
+        </div>
+        <script src="8_Pendulum.js"></script>
+    </body>
 </html>
+
+<style>
+    body {
+        background-color: #202030;
+    }
+
+    .flex-center {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+</style>

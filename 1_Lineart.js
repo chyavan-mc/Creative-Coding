@@ -1,5 +1,5 @@
 const canvas = document.getElementById("her");
-length = 0.85*Math.floor(Math.min(window.innerHeight,window.innerWidth));
+length = 0.80*Math.floor(Math.min(window.innerHeight,window.innerWidth));
 canvas.width = length;
 canvas.height = length;
 const context = canvas.getContext("2d");
@@ -8,7 +8,6 @@ context.fillRect(0, 0, canvas.width, canvas.height);
 let balls = 21;
 h = 0.045*Math.min(document.body.clientWidth, document.body.clientHeight);
 let text = document.getElementById("Ballcount");
-text.style = "font-family:\"Lucida Console\";font-size:"+ (0.55*h) +"px; color:"+ "#EBEB7D; background-color: #202030";
 text.innerHTML = "Lines : " + (balls-1);
 
 

@@ -2,7 +2,7 @@ const canvas = document.getElementById("Rayer");
 const context = canvas.getContext('2d');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
-context.fillStyle = "#202040";
+context.fillStyle = "#202030";
 context.fillRect(0, 0, canvas.width, canvas.height);
 let Lines = null;
 let mouseoverID = null;
@@ -101,7 +101,7 @@ function drawRays(x,y){
 }
 
 canvas.onmousemove = function(){
-    context.fillStyle = "#202040";
+    context.fillStyle = "#202030";
     context.fillRect(0, 0, canvas.width, canvas.height);
     Liner(Lines);
     x = event.clientX;
@@ -110,7 +110,7 @@ canvas.onmousemove = function(){
 }
 
 canvas.onmousedown = function(){
-    context.fillStyle = "#202040";
+    context.fillStyle = "#202030";
     context.fillRect(0, 0, canvas.width, canvas.height);
     Liner(Lines);
     x = event.clientX;
