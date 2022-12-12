@@ -141,7 +141,7 @@ var side = canvasSize*sizeFactor;
 function refreshCanvas(){
     canvas.width = 0.95*Math.min(window.innerWidth,window.innerHeight);
     canvas.height = canvas.width;
-    context.fillStyle = "#252530";
+    context.fillStyle = "#202030";
     context.fillRect(0, 0, canvas.width, canvas.height);
     canvasSize = canvas.width;
     side = canvasSize*sizeFactor;

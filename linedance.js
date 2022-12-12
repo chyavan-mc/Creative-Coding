@@ -1,6 +1,6 @@
 canvas = document.getElementById('linedance');
 context = canvas.getContext('2d');
-canvas.width = 0.95*Math.min(window.innerWidth,window.innerHeight);
+canvas.width = 0.99*Math.min(window.innerWidth,window.innerHeight);
 canvas.height = canvas.width;
 context.fillStyle = "#202030";
 context.fillRect(0,0, canvas.width, canvas.height);

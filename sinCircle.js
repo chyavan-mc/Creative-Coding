@@ -3,7 +3,7 @@ const context = canvas.getContext('2d');
 canvas.width = 0.95*Math.min(window.innerWidth, window.innerHeight);
 canvas.height = canvas.width;
 
-context.fillStyle = "#383030";
+context.fillStyle = "#202030";
 context.fillRect(0,0, canvas.width, canvas.height);
 let r = 0.35*canvas.width;
 
@@ -22,7 +22,7 @@ class Liner{
         context.moveTo(this.x,this.y);
         context.lineTo(this.x+this.len*Math.cos(this.pos_theta), this.y+this.len*Math.sin(this.pos_theta));
         context.strokeStyle = "#FFF";
-        context.lineWidth = 2*canvas.width/720;
+        context.lineWidth = 1.5*canvas.width/720;
         context.lineCap = "round";
         context.stroke();
         this.theta += 0.05;
@@ -32,15 +32,15 @@ class Liner{
 
 
 let a = new Array();
-let N = 50;
-let count =1;
+let N = 100;
+let count = 1;
 
 for(let i=0; i<N; i++){
     a.push(new Liner(i,N,0,count));
     a.push(new Liner(i,N,1,count));
 }
 id = setInterval(function(){
-    context.fillStyle = "#383030";
+    context.fillStyle = "#202030";
     context.fillRect(0,0, canvas.width, canvas.height);
     context.font="bold "+ 20*canvas.width/720 +"px arial";
     context.fillStyle = "#FFF";
@@ -55,14 +55,14 @@ id = setInterval(function(){
 canvas.onmousedown = function(){
     clearInterval(id);
     a.length = 0;
-    count%=6;
+    count%=20;
     count+=1;
     for(let i=0; i<N; i++){
         a.push(new Liner(i,N,0,count));
         a.push(new Liner(i,N,1,count));
     }
     id = setInterval(function(){
-        context.fillStyle = "#383030";
+        context.fillStyle = "#202030";
         context.fillRect(0,0, canvas.width, canvas.height);
         context.font="bold "+ 20*canvas.width/720 +"px arial";
         context.fillStyle = "#FFF";

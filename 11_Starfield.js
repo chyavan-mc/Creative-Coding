@@ -12,6 +12,9 @@ class Star{
         for(let i=0;i<Math.round(1000*Math.random());i++){
             this.draw();
         }
+        this.r = 180 + Math.round(75*Math.random())
+        this.g = 180 + Math.round(75*Math.random())
+        this.b = 180 + Math.round(75*Math.random())
     }
 
     reset(){
@@ -34,7 +37,7 @@ class Star{
         context.lineWidth = (euclid(canvas.width,canvas.height)/600)+this.d;
         context.lineCap = "round";
         this.len += (euclid(canvas.width,canvas.height)/6)*this.d*this.d*this.d*this.k*this.k;
-        context.strokeStyle= "rgba(255,255,255,"+ Math.sqrt(this.d)*this.k +")";
+        context.strokeStyle= "rgba(" + this.r + "," + this.g + "," + this.b + ","+ Math.sqrt(this.d)*this.k +")";
         context.stroke();
     }
 }

@@ -12,45 +12,45 @@
     <div class="parent">
         <div class="row p-0 m-0" style="width: 100%;">
             <div class="col-sm-3" style="background: #202030;">
-                <div class="row">
+                <div class="row p-4">
                     <div class="col-12 d-flex justify-content-center white-text">
-                        <h2> Game of Life </h2>
+                        <div class="h4"> Game of Life </div>
                     </div>
                 </div>
 
-                <div class="row pt-4">
-                    <div class="col"></div>
-                    <div class="col-5">
-                        <button class="btn btn-success" onclick="onStart()">Start</button>
+                <div class="row pt-2">
+                    <div class="col pl-0"></div>
+                    <div class="col-5 pl-0">
+                        <button class="btn btn-success text-smaller" onclick="onStart()">Start</button>
                     </div>
-                    <div class="col-5">
-                        <button class="btn btn-danger" onclick="onStop()">Stop</button>
+                    <div class="col-5 pr-0">
+                        <button class="btn btn-danger text-smaller" onclick="onStop()">Stop</button>
                     </div>
-                    <div class="col"></div>
+                    <div class="col pr-0"></div>
                 </div>
 
-                <div class="row pt-4">
-                    <div class="col"></div>
-                    <div class="col-5">
-                        <button class="btn btn-warning" id="randomize" onclick="onRandomize()">Randomize</button>
+                <div class="row pt-3">
+                    <div class="col pl-0"></div>
+                    <div class="col-5 pl-0">
+                        <button class="btn btn-warning text-smaller" id="randomize" onclick="onRandomize()">Randomize</button>
                     </div>
-                    <div class="col-5">
-                        <button class="btn btn-primary" onclick="onClearAll()">Clear All</button>
+                    <div class="col-5 pr-0">
+                        <button class="btn btn-primary text-smaller" onclick="onClearAll()">Clear All</button>
                     </div>
-                    <div class="col"></div>
+                    <div class="col pr-0"></div>
                 </div>
                 
 
-                <div class="row pt-4 pb-2">
-                    <div class="col"></div>
-                    <div class="col-10">
-                        <button class="btn btn-default" onclick="onStepForward()">Step Forward</button>
+                <div class="row pt-3 pb-1">
+                    <div class="col pl-0"></div>
+                    <div class="col-10  pl-0 pr-0">
+                        <button class="btn btn-default text-smaller" onclick="onStepForward()">Step Forward</button>
                     </div>
-                    <div class="col"></div>
+                    <div class="col pr-0"></div>
                 </div>
                 <hr class="white-border">
-                <div class="row pt-2 pb-4">
-                    <div class="col-sm-12 white-text">
+                <div class="row pt-2 pb-2">
+                    <div class="col-sm-12 white-text text-smaller">
                         <cite id="CITEREFGardner1970" class="citation journal cs1">Gardner, Martin (October 1970). 
                             <a rel="nofollow" class="external text" href="https://web.stanford.edu/class/sts145/Library/life.pdf">
                                 "Mathematical Games - The Fantastic Combinations of John Conway's New Solitaire Game 'Life
@@ -92,6 +92,11 @@
         align-items: center;
     }
 
+    .text-smaller {
+        font-size: 2.4vh;
+        font-weight: 500;
+    }
+
     .btn {
         width: 100%;
     }
@@ -106,5 +111,9 @@
     
     body {
         background-color: #202030;
+    }
+
+    .h4 {
+        text-align: center;
     }
 </style>

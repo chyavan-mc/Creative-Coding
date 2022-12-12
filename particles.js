@@ -12,7 +12,7 @@ function setCanvasBG(){
     height = 0.95*window.innerHeight;
     canvas.height = height;
     canvas.width = width;
-    context.fillStyle = "#282040";
+    context.fillStyle = "#202030";
     context.fillRect(0,0, width, height);
 }
 
