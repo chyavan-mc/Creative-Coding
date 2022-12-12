@@ -1,8 +1,8 @@
 const canvas = document.getElementById("pendulum");
 const context = canvas.getContext("2d");
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-context.fillStyle = "#303050";
+canvas.width = 0.99*window.innerWidth;
+canvas.height = 0.99*window.innerHeight;
+context.fillStyle = "#202030";
 context.fillRect(0,0,canvas.width,canvas.height);
 const g = 10;
 const r = 0.02*canvas.height;
@@ -17,7 +17,7 @@ class Pendulum{
         this.dt = 0.3;
         this.pivot = {x:0.5*canvas.width,y:0.1*canvas.height};
         this.open = {x:0.5*canvas.width,y:0.1*canvas.height + this.len};
-        this.rgb = Math.round(255*(i+20)/(numb+20));
+        this.rgb = Math.round(60 + (i*135/numb));
     }
 
     show(){
@@ -26,11 +26,11 @@ class Pendulum{
         context.moveTo(this.pivot.x,this.pivot.y);
         context.lineTo(this.open.x,this.open.y);
         context.lineCap = "round";
-        context.strokeStyle = "rgb("+this.rgb+","+this.rgb+","+this.rgb+")";
+        context.strokeStyle = "hsl("+this.rgb+", 75%, 50%)";
         context.stroke();
         context.beginPath();
         context.arc(this.open.x,this.open.y,r,0,2*Math.PI);
-        context.fillStyle =  "rgb("+this.rgb+","+this.rgb+","+this.rgb+")";
+        context.fillStyle =  "hsl("+this.rgb+", 75%, 50%)";
         context.fill();
         this.open.x = this.pivot.x + this.len*Math.sin(this.theta);
         this.open.y = this.pivot.y + this.len*Math.cos(this.theta);
@@ -46,9 +46,9 @@ for(let i=0;i<numb;i++){
 }
 
 setInterval(function(){
-    context.fillStyle = "rgb(48,48,80,0.9)";
+    context.fillStyle = "rgb(32,32,48,0.9)";
     context.fillRect(0,0,canvas.width,canvas.height);
-    for(let i=0;i<numb;i++){
+    for(let i=numb-1;i>=0;i--){
         a[i].show();
     }
     },refRate);

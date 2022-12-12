@@ -3,7 +3,7 @@ const context = canvas.getContext("2d");
 
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
-context.fillStyle = "#303050";
+context.fillStyle = "#202030";
 context.fillRect(0,0,canvas.width,canvas.height);
 const g = 10;
 const r = 0.02*canvas.height;
@@ -59,7 +59,7 @@ let a = new Pendulum(new Pendulum(0.25*canvas.width));
 let b = new Pendulum(new Pendulum(0.75*canvas.width));
 
 setInterval(function(){
-    context.fillStyle = "rgb(48,48,80,1)";
+    context.fillStyle = "rgb(32,32,48,1)";
     context.fillRect(0,0,canvas.width,canvas.height);
     context.font = Math.min(canvas.height/20,canvas.width/20)+"px Lucida Console";
     context.textAlign = "center";

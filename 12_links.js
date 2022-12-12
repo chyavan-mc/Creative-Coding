@@ -2,7 +2,7 @@ canvas = document.getElementById("links");
 context = canvas.getContext("2d");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
-context.fillStyle = "#38403C";
+context.fillStyle = "#202030";
 context.fillRect(0, 0, canvas.width, canvas.height);
 
 class Dot {
@@ -79,7 +79,7 @@ for (let i = 0; i < dots; i++) {
 }
 
 setInterval(function() {
-    context.fillStyle = "#38403C";
+    context.fillStyle = "#202030";
     context.fillRect(0, 0, canvas.width, canvas.height);
     for (let i = 0; i < dots - 1; i++) {
         lines(a[i], a[i + 1]);

@@ -49,7 +49,7 @@ for(let i=0;i<200;i++){
 }
 
 setInterval(function(){
-    context.fillStyle = "#202028";
+    context.fillStyle = "#202030";
     context.fillRect(0,0,canvas.width,canvas.height);
     for(let i=0;i<200;i++){
         stars[i].draw();
@@ -57,7 +57,7 @@ setInterval(function(){
     for(let i=0;i<0.05;i+=0.005){
         context.beginPath();
         context.arc(canvas.width/2,canvas.height/2,i*euclid(canvas.width,canvas.height),0,Math.PI*2);
-        context.fillStyle = "rgb(32, 32, 40,"+ (0.5-i) +")";
+        context.fillStyle = "rgb(32, 32, 48,"+ (0.5-i) +")";
         context.fill();
     }
 },40);

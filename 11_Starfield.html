@@ -1,12 +1,29 @@
 <html>
     <head>
+        <title>Warp Drive</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     </head>
 
     <body>
-        <p align="center">
-            <canvas id="field" width="0px" height"0px"></canvas>
-        </p>
-        
+        <div class="flex-center">
+            <canvas width="0px" height="0px" id="field"></canvas>
+        </div>
         <script src="11_Starfield.js"></script>
     </body>
 </html>
+
+<style>
+    body {
+        background-color: #202030;
+    }
+
+    .flex-center {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+</style>

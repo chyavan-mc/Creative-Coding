@@ -4,113 +4,107 @@
   <title>Cellular Automata - Life</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
-<body id="bodyId">
-    <div id="parent">
-        <div class="start-config container">
-            <div class="col-12 v-padding center-justify">
-                <h2> Game of Life </h2>
+<body>
+    <div class="parent">
+        <div class="row p-0 m-0" style="width: 100%;">
+            <div class="col-sm-3" style="background: #202030;">
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-center white-text">
+                        <h2> Game of Life </h2>
+                    </div>
+                </div>
+
+                <div class="row pt-4">
+                    <div class="col"></div>
+                    <div class="col-5">
+                        <button class="btn btn-success" onclick="onStart()">Start</button>
+                    </div>
+                    <div class="col-5">
+                        <button class="btn btn-danger" onclick="onStop()">Stop</button>
+                    </div>
+                    <div class="col"></div>
+                </div>
+
+                <div class="row pt-4">
+                    <div class="col"></div>
+                    <div class="col-5">
+                        <button class="btn btn-warning" id="randomize" onclick="onRandomize()">Randomize</button>
+                    </div>
+                    <div class="col-5">
+                        <button class="btn btn-primary" onclick="onClearAll()">Clear All</button>
+                    </div>
+                    <div class="col"></div>
+                </div>
+                
+
+                <div class="row pt-4 pb-2">
+                    <div class="col"></div>
+                    <div class="col-10">
+                        <button class="btn btn-default" onclick="onStepForward()">Step Forward</button>
+                    </div>
+                    <div class="col"></div>
+                </div>
+                <hr class="white-border">
+                <div class="row pt-2 pb-4">
+                    <div class="col-sm-12 white-text">
+                        <cite id="CITEREFGardner1970" class="citation journal cs1">Gardner, Martin (October 1970). 
+                            <a rel="nofollow" class="external text" href="https://web.stanford.edu/class/sts145/Library/life.pdf">
+                                "Mathematical Games - The Fantastic Combinations of John Conway's New Solitaire Game 'Life
+                                <span class="cs1-kern-right">'</span>"
+                            </a> 
+                            <span class="cs1-format">(PDF)</span>. 
+                            <i>
+                                <a href="https://en.wikipedia.org/wiki/Scientific_American" title="Scientific American">Scientific American</a>
+                            </i> (223): 120–123. 
+                            <a href="https://en.wikipedia.org/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1038%2Fscientificamerican1070-120">10.1038/scientificamerican1070-120</a>.</cite>
+                    </div>
+                </div>
             </div>
-            
-            <div class="col-12 v-padding h-flex">
-                    <button class="btn btn-success h-margin v-margin flex-btn" onclick="onStart()">Start</button>
-                    <button class="btn btn-danger h-margin v-margin flex-btn" onclick="onStop()">Stop</button>
+
+            <div class="col-sm-9 p-0 m-0" style="background: #202030;">
+                <div style="height: 100vh;">
+                    <div class="flex-center">
+                        <canvas id="lifeCanvas"></canvas>
+                    </div>
+                </div>
             </div>
-            <div class="col-12 v-padding h-flex">
-                    <button class="btn btn-warning h-margin v-margin flex-btn" id="randomize" onclick="onRandomize()">Randomize</button>
-                    <button class="btn btn-primary h-margin v-margin flex-btn" onclick="onClearAll()">Clear All</button>
-            </div>
-            <div class="col-12 v-padding h-flex">
-                <button class="btn btn-default h-margin v-margin flex-full" onclick="onStepForward()">Step Forward</button>
-            </div>
-            <div class="col-12 v-padding h-margin v-margin h-flex">
-                <cite id="CITEREFGardner1970" class="citation journal cs1">Gardner, Martin (October 1970). 
-                    <a rel="nofollow" class="external text" href="https://web.stanford.edu/class/sts145/Library/life.pdf">
-                        "Mathematical Games - The Fantastic Combinations of John Conway's New Solitaire Game 'Life
-                        <span class="cs1-kern-right">'</span>"
-                    </a> 
-                    <span class="cs1-format">(PDF)</span>. 
-                    <i>
-                        <a href="https://en.wikipedia.org/wiki/Scientific_American" title="Scientific American">Scientific American</a>
-                    </i> (223): 120–123. 
-                    <a href="https://en.wikipedia.org/wiki/Doi_(identifier)" class="mw-redirect" title="Doi (identifier)">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1038%2Fscientificamerican1070-120">10.1038/scientificamerican1070-120</a>.</cite>
-            </div>
-        </div>
-        <div class="end-canvas" id="endCanvas">
-            <canvas id="lifeCanvas"></canvas>
         </div>
     </div>
-<script src="14_life.js"></script>
+    <script src="14_life.js"></script>
 </body>
 </html>
 <style>
-    .flex-full { 
-        flex: 100%;
-    }
-
-    .flex-btn {
-        flex: 50%;
-    }
-
-    .h-margin {
-        margin-left: 5%;
-        margin-right: 5%;
-    }
-
-    .v-margin {
-        margin-top: 2%;
-        margin-bottom: 2%;
-    }
-
-    .h-flex {
+    .parent {
         display: flex;
-        flex-direction: row;
+        width: 100%;
+        height: 100%;
     }
-
-    .v-flex {
+    
+    .flex-center {
         display: flex;
-        flex-direction: column;
-    }
-
-    .r-flex {
-        display: flex;
-        flex-direction: row;
-    }
-
-    /* 
-    @media (max-width: 800px) {
-        .r-flex {
-            flex-direction: column;
-        }
-    } */
-
-    .v-padding {
-        padding-top: 1vh;
-        padding-bottom: 1vh;
-    }
-
-    .center-justify {
-        display: flex;
+        height: 100%;
+        width: 100%;
         justify-content: center;
-    }
-
-    .start-config {
-        flex: 30%;
-        height: 100%;
-        width: 100%;
-        background: #F8F8F8;
-    }
-
-    .end-canvas {
-        flex: 70%;
-        height: 100%;
-        width: 100%;
-        background: #FFF;
-        display: flex;
         align-items: center;
-        justify-content: center;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .white-text {
+        color: #FFF;
+    }
+
+    .white-border {
+        background: #FFF;
+    }
+    
+    body {
+        background-color: #202030;
     }
 </style>

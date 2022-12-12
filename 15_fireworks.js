@@ -8,12 +8,12 @@ const g = 10;
 const t = 0.1;
 const refRate = 20;
 var clear = 0;
-context.fillStyle = "#242430";
+context.fillStyle = "#202030";
 context.fillRect(0,0,canvas.width,canvas.height);
 
 function clearCanvas() {
     clear += 1;
-    context.fillStyle = clear%15 == 0 ? "#24243088": "#24243022";
+    context.fillStyle = clear%15 == 0 ? "#20203088": "#20203022";
     context.fillRect(0,0,canvas.width,canvas.height);
 }
 

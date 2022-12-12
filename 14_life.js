@@ -1,19 +1,11 @@
-let innerWidth = window.innerWidth;
-let innerHeight = window.innerHeight;
 const cellWidth = 20;
 const refRate = 200;
 const buffer = 3;
-
-const parent = document.getElementById("parent");
-parent.className = innerWidth > innerHeight ? "h-flex" : "v-flex";
-parent.style.width = innerWidth + 'px';
-parent.style.height = innerHeight + 'px';
-
-const canvas = document.getElementById("lifeCanvas");
+var canvas = document.getElementById('lifeCanvas');
 const context = canvas.getContext("2d");
 
-let width = innerWidth > innerHeight ? Math.floor(0.7*innerWidth/cellWidth)*cellWidth : Math.floor(innerWidth/cellWidth)*cellWidth;
-let height = innerWidth > innerHeight ? Math.floor(innerHeight/cellWidth)*cellWidth : Math.floor(0.7*innerHeight/cellWidth)*cellWidth;
+let width = innerWidth > innerHeight ? Math.floor(0.75*innerWidth/cellWidth)*cellWidth : Math.floor(innerWidth/cellWidth)*cellWidth;
+let height = innerWidth > innerHeight ? Math.floor(innerHeight/cellWidth)*cellWidth : Math.floor(0.75*innerHeight/cellWidth)*cellWidth;
 canvas.width = width;
 canvas.height = height;
 const xTotal = (width/cellWidth) + 2*buffer;
@@ -88,7 +80,7 @@ function drawAll(){
         context.lineWidth = 1;
         context.moveTo(0, j*cellWidth);
         context.lineTo(width, j*cellWidth);
-        context.strokeStyle = "#DDD";
+        context.strokeStyle = "#CCC";
         context.stroke();
     }
 
@@ -97,7 +89,7 @@ function drawAll(){
         context.lineWidth = 1;
         context.moveTo(i*cellWidth,0);
         context.lineTo(i*cellWidth,height);
-        context.strokeStyle = "#DDD";
+        context.strokeStyle = "#CCC";
         context.stroke();
     }
 
@@ -117,7 +109,7 @@ function clearAll(){
         context.lineWidth = 1;
         context.moveTo(0, j*cellWidth);
         context.lineTo(width, j*cellWidth);
-        context.strokeStyle = "#DDD";
+        context.strokeStyle = "#CCC";
         context.stroke();
     }
 
@@ -126,7 +118,7 @@ function clearAll(){
         context.lineWidth = 1;
         context.moveTo(i*cellWidth,0);
         context.lineTo(i*cellWidth,height);
-        context.strokeStyle = "#DDD";
+        context.strokeStyle = "#CCC";
         context.stroke();
     }
 
