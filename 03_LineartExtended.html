@@ -1,0 +1,44 @@
+<html>
+	<head>
+		<title>Line Art (Psych)</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+			integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	</head>
+
+	<body onload="start()">
+		<div class="flex-center">
+			<canvas id="her" width="0px" height="0px"></canvas>
+		</div>
+		<div id="Ballcount" class="flex-center padder text-style"></div>
+		<div class="flex-center">
+			<button class="btn padder btn-success m-1" onclick="decreaser()">DECREASE LINES</button>
+			<button class="btn padder btn-success m-1" onclick="increaser()">INCREASE LINES</button>
+		</div>
+		<script src="03_LineartExtended.js"></script>
+	</body>
+
+</html>
+
+<style>
+    body {
+        background-color: #202030;
+    }
+
+    .padder {
+        padding: 1vh 3vw;
+    }
+
+    .flex-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .text-style {
+        font-size: 4vh;
+        color:#FFF;
+        background-color: #202030;
+    }
+</style>

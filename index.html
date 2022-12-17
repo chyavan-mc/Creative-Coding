@@ -1,173 +1,303 @@
 <html>
 
 <head>
+    <title>Creative Coding</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&display=swap" rel="stylesheet">
     <style>
-        body,
-        html {
-            height: 100%;
-            margin: 0;
-        }
-
+        @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&display=swap');
+        
         .bg {
-            /* The image used */
             background-image: url("bg.png");
-            /* Full height */
-            height: 100%;
-            /* Center and scale the image nicely */
             background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
+            background-size: 100%;
+            background-repeat: repeat;
         }
 
-        a {
-            font-family: 'Arial Black';
-            color: #EEEEEE;
+        .card {
+            height: 8rem;
+            width: 100%;
+            background: #0006;
+            color: #FFF;
+            border-radius: .5rem;
+            transition: transform ease 300ms;
         }
 
-        a:link {
-            text-decoration: none;
+        .card:hover {
+            transform: scale(1.1);
+            background: #000;
+            color: #a8ff99;
         }
 
-        a:visited {
-            text-decoration: none;
+        a, .card-text {
+            width:100%;
+            height:100%;
         }
 
-        a:hover {
-            text-decoration: underline;
-        }
-
-        div.parent {
+        .card-text {
+            font-weight: 200;
+            font-size: 1.5rem;
+            font-family: 'Josefin Sans', sans-serif;
             text-align: center;
         }
 
-        ol {
-            display: inline-block;
-            text-align: left;
-            padding-right: 40px;
-            font-family: 'Arial Black';
-            color: #EEEEEE;
-        }
-
-        h3 {
-            font-family: 'Arial Black';
-            color: #EEEEEE;
+        .reset-a, .reset-a:hover, .reset-a:visited, .reset-a:focus, .reset-a:active  {
+            text-decoration: none;
+            color: inherit;
+            outline: 0;
+            cursor: pointer;
         }
     </style>
 </head>
 
 <body class="bg">
-    <h1 style="font-family: 'Arial Black'; color: #EEEEEE;" align="center">
-        HERE IS A LIST OF MY CREATIVE WEBPAGES
-    </h1>
+    <div class="container">
+        <div class="row pt-5 pb-3">
+            <div class="col-sm-12">
+                <div class="h3" style="font-family: 'Arial Black'; color: #EEEEEE; text-align: center;">
+                    HERE IS A LIST OF MY CREATIVE WEBPAGES
+                </div>
+            </div>
+        </div>
+    
+        <div class="row pt-2 pb-2">
+            <div class="col-sm-3 p-4">
+                <a class="reset-a" href="01_Lineart.html" target="_blank">
+                    <div class="card">
+                        <div class="card-text d-flex align-items-center justify-content-center">
+                            Line Art
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="col-sm-3 p-4">
+                <a class="reset-a" href="03_LineartExtended.html" target="_blank">
+                    <div class="card">
+                        <div class="card-text d-flex align-items-center justify-content-center">
+                            Line Art (Psych)
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="col-sm-3 p-4">
+                <a class="reset-a" href="02_Rain.html" target="_blank">
+                    <div class="card">
+                        <div class="card-text d-flex align-items-center justify-content-center">
+                            Rain
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="col-sm-3 p-4">
+                <a class="reset-a" href="04_Moon.html" target="_blank">
+                    <div class="card">
+                        <div class="card-text d-flex align-items-center justify-content-center">
+                            Moon
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    
+        <div class="row pt-1 pb-2">
+            <div class="col-sm-3 p-4">
+                <a class="reset-a" href="05_sineCircle.html" target="_blank">
+                    <div class="card">
+                        <div class="card-text d-flex align-items-center justify-content-center">
+                            Sine Circles
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="col-sm-3 p-4">
+                <a class="reset-a" href="06_Raytracing.html" target="_blank">
+                    <div class="card">
+                        <div class="card-text d-flex align-items-center justify-content-center">
+                            Ray Tracing
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="col-sm-3 p-4">
+                <a class="reset-a" href="07_Rendering.html" target="_blank">
+                    <div class="card">
+                        <div class="card-text d-flex align-items-center justify-content-center">
+                            Rendering<sup>*</sup>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="col-sm-3 p-4">
+                <a class="reset-a" href="08_Pendulum.html" target="_blank">
+                    <div class="card">
+                        <div class="card-text d-flex align-items-center justify-content-center">
+                            Pendulum
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    
+        <div class="row pt-1 pb-2">
+            <div class="col-sm-3 p-4">
+                <a class="reset-a" href="09_MultiPendulum.html" target="_blank">
+                    <div class="card">
+                        <div class="card-text d-flex align-items-center justify-content-center">
+                            Multiple Pendulums
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="col-sm-3 p-4">
+                <a class="reset-a" href="10_DoublePendulum.html" target="_blank">
+                    <div class="card">
+                        <div class="card-text d-flex align-items-center justify-content-center">
+                            Double Pendulum<sup>*</sup>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="col-sm-3 p-4">
+                <a class="reset-a" href="11_Starfield.html" target="_blank">
+                    <div class="card">
+                        <div class="card-text d-flex align-items-center justify-content-center">
+                            Warp Drive
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="col-sm-3 p-4">
+                <a class="reset-a" href="12_links.html" target="_blank">
+                    <div class="card">
+                        <div class="card-text d-flex align-items-center justify-content-center">
+                            Links
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    
+        <div class="row pt-1 pb-2">
+            <div class="col-sm-3 p-4">
+                <a class="reset-a" href="13_cubes.html" target="_blank">
+                    <div class="card">
+                        <div class="card-text d-flex align-items-center justify-content-center">
+                            Cubes
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="col-sm-3 p-4">
+                <a class="reset-a" href="14_life.html" target="_blank">
+                    <div class="card">
+                        <div class="card-text d-flex align-items-center justify-content-center">
+                            Game of Life <br> (Cellular Automata)
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="col-sm-3 p-4">
+                <a class="reset-a" href="15_fireworks.html" target="_blank">
+                    <div class="card">
+                        <div class="card-text d-flex align-items-center justify-content-center">
+                            Fireworks
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="col-sm-3 p-4">
+                <a class="reset-a" href="16_cube_in_a_cube.html" target="_blank">
+                    <div class="card">
+                        <div class="card-text d-flex align-items-center justify-content-center">
+                            Cubes in a Cube
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    
+        <div class="row pt-1 pb-2">
+            <div class="col-sm-3 p-4">
+                <a class="reset-a" href="17_linedance.html" target="_blank">
+                    <div class="card">
+                        <div class="card-text d-flex align-items-center justify-content-center">
+                            Line Dance
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="col-sm-3 p-4">
+                <a class="reset-a" href="18_particles.html" target="_blank">
+                    <div class="card">
+                        <div class="card-text d-flex align-items-center justify-content-center">
+                            Particles
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="col-sm-3 p-4">
+                <a class="reset-a" href="19_pi.html" target="_blank">
+                    <div class="card">
+                        <div class="card-text d-flex align-items-center justify-content-center">
+                            π - Monte Carlo Approximation
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="col-sm-3 p-4">
+                <a class="reset-a" href="20_squares.html" target="_blank">
+                    <div class="card">
+                        <div class="card-text d-flex align-items-center justify-content-center">
+                            Square Waves
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    
+        <div class="row pt-1 pb-2">
+            <div class="col-sm-3 p-4"></div>
 
-    <div class="parent">
-        <ol>
-            <li>
-                <h3>
-                    <a href="14_life.html">
-                        Game of Life
-                    </a>
-                </h3>
-            </li>
-            <li>
-                <h3>
-                    <a href="time3.html">
-                        Time Cube
-                    </a>
-                </h3>
-            </li>
-            <li>
-                <h3>
-                    <a href="1_Lineart.html">
-                        LINE ART
-                    </a>
-                </h3>
-            </li>
-            <li>
-                <h3>
-                    <a href="4_LineartExtended.html">
-                        LINE ART 2
-                    </a>
-                </h3>
-            </li>
-            <li>
-                <h3>
-                    <a href="3_Rain.html">
-                        RAIN
-                    </a>
-                </h3>
-            </li>
-            <li>
-                <h3>
-                    <a href="5_Moon.html">
-                        MOON
-                    </a>
-                </h3>
-            </li>
-            <li>
-                <h3>
-                    <a href="6_Raytracing.html">
-                        RAY TRACING
-                    </a>
-                </h3>
-            </li>
-            <li>
-                <h3>
-                    <a href="7_Rendering.html">
-                        RENDERING
-                    </a>
-                </h3>
-            </li>
-            <li>
-                <h3>
-                    <a href="8_Pendulum.html">
-                        PENDULUM
-                    </a>
-                </h3>
-            </li>
-            <li>
-                <h3>
-                    <a href="9_MultiPendulum.html">
-                        MULTI-PENDULUM
-                    </a>
-                </h3>
-            </li>
-            <li>
-                <h3>
-                    <a href="11_Starfield.html">
-                        STAR FIELD
-                    </a>
-                </h3>
-            </li>
-            <li>
-                <h3>
-                    <a href="12_links.html">
-                        LINKS
-                    </a>
-                </h3>
-            </li>
-            <li>
-                <h3>
-                    <a href="13_cubes.html">
-                        CUBES
-                    </a>
-                </h3>
-            </li>
-            <li>
-                <h3>
-                    <a href="SkipCounter.html">
-                        Skip Counter
-                    </a>
-                </h3>
-            </li>
-            <li>
-                <h3>
-                    <a href="15_fireworks.html">
-                        Fireworks
-                    </a>
-                </h3>
-            </li>
-        </ol>
+            <div class="col-sm-3 p-4">
+                <a class="reset-a" href="21_time_cube.html" target="_blank">
+                    <div class="card">
+                        <div class="card-text d-flex align-items-center justify-content-center">
+                            Time<sup>3</sup>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="col-sm-3 p-4">
+                <a class="reset-a" href="22_waves.html" target="_blank">
+                    <div class="card">
+                        <div class="card-text d-flex align-items-center justify-content-center">
+                            Waves
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="col-sm-3 p-4"></div>
+        </div>
     </div>
 </body>
 
