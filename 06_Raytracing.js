@@ -93,7 +93,7 @@ function drawRays(x,y){
             context.strokeStyle = "rgba(255,255,255,0.15)";
             context.lineWidth = 0.002*Math.min(canvas.width,canvas.height);
             context.moveTo(x,y);
-            let r = Math.max(canvas.width,canvas.height);
+            let r = 1.5*Math.max(canvas.width,canvas.height);
             context.lineTo(x+(r*Math.cos(theta)),y+(r*Math.sin(theta)));
             context.stroke();}
         theta+= ((2*Math.PI)/n);
